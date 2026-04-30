@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Serialist | A Monthly Journal of Mystery & Prose</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=IM+Fell+English+SC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper-color: #fdfaf3;
+            --ink-color: #1a1a1a;
+            --accent-border: #2c3e50;
+            --vintage-gold: #b8860b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #dcdcdc; 
+            font-family: 'Libre Baskerville', serif;
+            color: var(--ink-color);
+            line-height: 1.6;
+        }
+
+        .magazine-page {
+            background-color: var(--paper-color);
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 60px 50px;
+            border: 1px solid #bbb;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        /* Elaborate Victorian Border */
+        .magazine-page::before {
+            content: "";
+            position: absolute;
+            top: 15px; left: 15px; right: 15px; bottom: 15px;
+            border: 4px double var(--accent-border);
+            pointer-events: none;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-border);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .vol-date {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin: 10px 0;
+        }
+
+        .tagline {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 1.2rem;
+            border-top: 1px solid var(--accent-border);
+            display: inline-block;
+            padding-top: 5px;
+            margin-top: 5px;
+        }
+
+        section { margin-bottom: 40px; position: relative; z-index: 1; }
+
+        h2 {
+            font-family: 'IM Fell English SC', serif;
+            text-align: center;
+            background: var(--paper-color);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 50%; left: 0; right: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .intro-text {
+            column-count: 2;
+            column-gap: 40px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .pricing-box {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tier {
+            flex: 1;
+            border: 1px solid #ddd;
+            padding: 25px;
+            text-align: center;
+            background: rgba(255,255,255,0.4);
+        }
+
+        .price { font-size: 1.8rem; font-weight: bold; font-family: 'Playfair Display', serif; margin: 10px 0; }
+        .shipping-note { font-size: 0.85rem; font-style: italic; color: #555; }
+        
+        .best-value { border: 2px solid var(--accent-border); position: relative; background: #f9f6ef; }
+        .best-value::after {
+            content: "Most Advantageous";
+            position: absolute;
+            top: -12px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-border);
+            color: white;
+            padding: 2px 12px;
+            font-size: 0.75rem;
+            font-family: 'IM Fell English SC', serif;
+        }
+
+        .instructions {
+            background: #f1ede4;
+            padding: 30px;
+            border: 1px dashed var(--accent-border);
+        }
+
+        .instructions ol { margin-left: 25px; }
+        .instructions li { margin-bottom: 15px; }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-footer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-family: 'IM Fell English SC', serif;
+        }
+
+        .pre-order-banner {
+            background: var(--accent-border);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-family: 'IM Fell English SC', serif;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        a { color: var(--accent-border); font-weight: bold; }
+
+        @media (max-width: 600px) {
+            .magazine-page { padding: 40px 20px; }
+            h1 { font-size: 2.8rem; }
+            .intro-text { column-count: 1; }
+            .pricing-box { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="magazine-page">
+        <div class="pre-order-banner">Dispatching June 1st • Reserve Your Volume Now</div>
+
+        <header>
+            <div class="vol-date">Vol. 1 • June 2026</div>
+            <h1>The Serialist</h1>
+            <div class="tagline">Mysteries, Holiday Tales, & Fine Verse</div>
+        </header>
+
+        <section>
+            <h2>The Prospectus</h2>
+            <div class="intro-text">
+                <p>It is with great pleasure that we present <strong>The Serialist</strong>, a monthly periodical for the discerning reader of mystery and suspense. Each issue is meticulously curated to feature the finest new short stories and poems, all penned in the classic tradition of the great Strand authors.</p>
+                <p>We are particularly fond of the changing seasons; thus, should a month contain a holiday, our readers can expect a themed story fitting the occasion. We invite you to subscribe and join our fellowship of mystery enthusiasts.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Terms of Subscription</h2>
+            <div class="pricing-box">
+                <div class="tier">
+                    <h3>Monthly</h3>
+                    <div class="price">$17.99</div>
+                    <p class="shipping-note">+ Shipping Fees</p>
+                    <p>Payable per issue.<br>Cancel at any time.</p>
+                </div>
+                <div class="tier best-value">
+                    <h3>Annual</h3>
+                    <div class="price">$160.99</div>
+                    <p class="shipping-note">+ Shipping Fees</p>
+                    <p>Twelve issues for the price of nine.<br><strong>Our Best Value.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>How to Enroll</h2>
+            <div class="instructions">
+                <p>To ensure a personal touch and maintain our traditional values, we handle all subscriptions via direct correspondence and <strong>Money Orders</strong>:</p>
+                <br>
+                <ol>
+                    <li><strong>Application:</strong> Email <strong>max@mateosian.com</strong> to state your desire for a Monthly or Annual subscription.</li>
+                    <li><strong>Confirmation:</strong> We shall reply with an official confirmation and the total cost including shipping.</li>
+                    <li><strong>Remittance:</strong> Post your money order to the address below.</li>
+                    <li><strong>Monthly Dispatch:</strong> Your first volume will be sent upon receipt of funds. Subsequent issues will be dispatched monthly on that same anniversary date.</li>
+                </ol>
+                <br>
+                <p><small><em>Notice: Payment must be received by your monthly anniversary. If funds are delayed, we shall notify you via email and hold the current issue until payment arrives.</em></small></p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contact-footer">
+                <div>
+                    <strong>Editorial Offices</strong><br>
+                    6 Graymalkin Pl<br>
+                    Freeport, ME 04032
+                </div>
+                <div>
+                    <strong>Contact Us</strong><br>
+                    <a href="mailto:max@mateosian.com">max@mateosian.com</a><br>
+                    <a href="tel:+12078158916">207-815-8916</a>
+                </div>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.8rem;">&copy; 2026 The Serialist Magazine. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
